@@ -1,0 +1,127 @@
+@font-face {
+    font-family: tu;
+    src: url(Comix\ Loud.ttf);
+}
+@font-face {
+    font-family: taca;
+    src: url(Steamed\ DEMO.otf);
+}
+@font-face {
+    font-family: ti;
+    src: url(Crispy\ Tofu.otf);
+}
+
+body{
+    background-image: linear-gradient(135deg, rgba(17, 20, 58, 0.562),rgba(17, 20, 58, 0.288),rgba(17, 20, 58, 0.541), rgba(17, 20, 58, 0.212), rgba(17, 20, 58, 0.226), rgba(17, 20, 58, 0.541),rgba(17, 20, 58, 0.527));
+    background-size: 500%;
+    animation: fanimado 10s infinite; 
+    }
+    
+    @keyframes fanimado {
+        
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+      }
+}
+.navbar{
+    box-shadow: 5px 5px 5px #a4b9c7
+}
+.navbar-collapse{
+    margin-left: 800px;
+}
+.titu{
+    font-family: taca;
+    font-size: 30px;
+}
+
+h1{
+    font-family: tu;
+    color:url(https://image.freepik.com/vector-gratis/fondo-telarana-halloween_23-2148657244.jpg);
+    text-shadow: 7px 5px 7px #a4b9c7;
+    font-size: 50px;
+}
+.form{
+    text-align: left;
+}
+.siderbar_nav{
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.938);
+    padding: 60px 20px;
+    flex-grow: 1;
+    list-style: none;
+    width: 300px;
+    height: 1100px;
+    float: right ;
+    text-align: center;
+}
+
+.taca{
+    font-family: tu;
+    font-size: 13px;
+}
+
+.card-text{
+    color: rgb(255, 255, 255);
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.card-text{
+    color: rgb(0, 0, 0);
+    background-color: cornsilk;
+    border-radius: 1rem;
+}
+
+img{
+    margin: auto;
+    width: 150px;
+    height: 200px;
+    padding: 30px;
+}
+
+.card{
+    background: url(https://image.freepik.com/vector-gratis/fondo-telarana-halloween_23-2148657244.jpg);
+    background-color: rgba(0, 0, 0, 0.384);
+    border: blanchedalmond;
+    width: 200px;
+    height: 340px;
+
+}
+
+.card-title{
+    text-shadow: 2px 2px 2px #5f0808;
+    font-size: 18px;
+}
+
+.col-lg-3{
+    width: 200px;
+    margin: 20px;
+}
+
+.gradient{
+    margin: 20px;
+}
+
+.btn-info{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+
+    transform: translate(-50%, -50%);
+}
+
+.btn{
+    color: rgb(13, 17, 58);
+    background-color: rgb(250, 240, 200);
+    border: rgb(13, 17, 58);
+}
+.subtitulo{
+    font-family: ta;
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En venta</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="Vender.css">
+
+</head>
+<body>
+
+<!-- PARTE DE ARRIBA: OPCIÓN -->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="titu navbar-brand text-danger " href="#"> MUNDO MARVEL </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-5" id="navbarScroll">
+      <ul class="navbar-nav me-auto  my-lg-0 navbar-nav-scroll" >
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"   href="publi.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"   href="cine.html" ><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="hombre araña.html" ><i class="fa fa-gamepad" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="Vender.html"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="Editar.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="prueba.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <br>
+<br>
+<br>
+
+
+<!-- TITULO -->
+    <h1 class="text-center"> PRODUCTOS MARVEL</h1>    
+<br>
+    <br>
+
+
+
+
+<!-- Para el pago -->
+
+<div class="siderbar_nav">
+
+  <h5 class="subtitulo" style="font-size: 17px;"> <i class="fa fa-money" aria-hidden="true"></i> ¡ES HORA DE CANCELAR TU(S) PRODUCTOS! </h5>
+  <br>
+
+  <p style="text-align: justify;"> Completa todos los datos y selecciona la tienda donde recogeras el producto</p>
+  
+   <hr>
+   
+   <form>
+    <label for="email-ejemplo"> Ingrese su correo electronico:</label>
+    <br>
+    <input type="email" id="email-ejemplo" placeholder= "Ingrese su correo electrónico:"
+           name="email-ejemplo" requiered></input>
+    <br>
+    <br>
+        Nombres:<br>
+        <input type="text"  name="firstname">
+        <br>
+        <br>
+        Apellidos:<br>
+        <input type="text"  name="lastname"></imput>
+        <br>
+        <p>Ingrese su fecha de nacimiento:</p>
+        <input type="date">
+        <br>
+        <p>Ingrese su número telefónico: </p>
+        <input type="password"></br>
+        <br>
+
+</form>
+
+<br>
+<hr>
+   <h3 class="lista text-danger" style="font-size: 13px;"> LISTADO DE PRODUCTOS</h3>
+   <div id="listado">
+  </button> <button onclick="eliminar()" class="btn btn-danger"><i class="fa fa-cart-arrow-down" aria-hidden="true"> Eliminar </i></button>
+  </div> 
+
+   <h4 class="lista text-danger" style="font-size: 13px;"> TOTAL DE PRODUCTOS</h4>
+   <div style="font-size: 25px;" id="contador">
+   </div>
+   <hr>
+
+   <br>
+
+   <div class="form-container">
+      <div class="field-container">
+          <i class="fa fa-credit-card" aria-hidden="true"><label for="numero-tarjeta">Número de tu tarjeta</label></i>
+          <br>
+          <br>
+          <input id="numero-tarjeta" type="text" pattern="[0-9]*" inputmode="numeric">
+          <p id="alerta"></p>
+          <button type="button" id="btn-validar"style="">VALIDAR</button>
+      </div>
+  </div>
+  <br>
+
+  <button type="button" id="btn-comprar" style="background-color: rgb(168, 168, 199); font-family: ta; border-style: double;"> COMPRAR </button>
+
+</div>
+</div>
+
+
+
+
+
+
+<!-- PARTE 1: PRODUCTOS DE MARVEL CON PRECIOS -->
+<div class="gradient row">
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card">
+              <img
+                src="https://i.linio.com/p/1f99fda1b7375c77c237483cca02919c-catalog.webp" 
+                class="card-img-top"
+                
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Figura Titan Hero Max Venom</h5>
+                <p class="card-text"> S/. 60.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+        
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/36382867e3d8a4c71c10b1c4879915a6-catalog.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Marvel Legends Series Doctor Strange</h5>
+                <p class="card-text"> S/. 200.00</p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/83428eb6c39203b898f8919d4a94017d-catalog.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Guante Electrónico Articulado Marvel</h5>
+                <p class="card-text"> S/. 250.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/f0ccbf10bd7a535a457374c1bbcdf75c-product.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Guardianes de la Galaxia - Alcancía Busto de Groot</h5>
+                <p class="card-text"> S/. 200.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+        
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/4157503a5c7163a5779108e2f12813b6-catalog.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">WOLVERINE MARVEL GIGANTE 54 CM DE ALTO</h5>
+                <p class="card-text"> S/. 250.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="gradient col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/535392dab42038c029a122af62049ebd-catalog.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Hasbro Marvel Legends Series Stan lee 6</h5>
+                <p class="card-text"> S/. 100.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/1f4db03e9f5098e966eaf7cf471fc7be-catalog.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Spider-man Marvel ultimate gigante 45cm</h5>
+                <p class="card-text"> S/. 150.00  </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/26a5dfcf2659e34c52e3d63fdd36f5db-product.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Marvel Legends Wandavision White Vision</h5>
+                <p class="card-text"> S/. 100.00  </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/5b1bdca021721a07dffdf59e592a5a18-catalog.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Avengers Marvel Legends Antman</h5>
+                <p class="card-text"> S/. 100.00  </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/79571a3086445aeeaf9646aa078337bf-product.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger"> Marvel Spider-Man Legends Retro</h5>
+                <p class="card-text"> S/. 180.00  </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/5b1bdca021721a07dffdf59e592a5a18-catalog.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Avengers Marvel Legends Antman</h5>
+                <p class="card-text"> S/. 180.00  </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/77785b19ae1a8a936d35f45921741de8-product.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger"> Figuras X-Men Legends Old Logan Hawkeye </h5>
+                <p class="card-text"> S/. 180.00  </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/20e008a1b20ee52055db85d41f6be9fe-product.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Avengers Marvel Coleccion Ironman</h5>
+                <p class="card-text"> S/. 180.00  </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/2fcb7115ed0d3f1255a8d115676f1202-cart.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Polo Avengers manga corta azul</h5>
+                <p class="card-text"> S/. 50.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/fbb86a35485d44c9af0d0e877294e16c-product.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Polo Manga Corta para Niño Marvel</h5>
+                <p class="card-text"> S/. 50.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm text-center">
+            <div class="card mb-3">
+              <img
+                src="https://i.linio.com/p/8b5c29f5ea027a7fc8559dfd2323d699-product.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger">Polo Manga Larga  Niño Marvel-Negro</h5>
+                <p class="card-text"> S/. 35.00 </p>
+                <button onclick="agregar()" class="btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"> Añadir</i>
+    
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- CDN Bootstrap js -->
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"
+></script>
+<!-- CDN jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Se agrega el CDN de Firebase, agregar los demas CDN (jquery y bootstrap)-->
+<!-- CDN Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+ <!-- CDN Authentication Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<!-- CDN Firestore Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<!-- js personalizado -->
+<script src="Vender.js"></script>
+
+</body>
+</html>
